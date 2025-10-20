@@ -5,7 +5,8 @@
 <body>
 	<form action="bajas.php" method="post" enctype="multipart/form-data">
 		<fieldset>
-			<legend>Eliminar producto</legend>
+			<legend><strong>BAJAS</strong></legend>
+			<p><strong>Seleccione producto a eliminar:</strong></p>
 			<select name="product" id="product">
 				<?php
 				include("conexion.php");
@@ -21,9 +22,9 @@
 
 			</select>
 			<input type="submit" value="Eliminar">
+			<p><a href="menu.php"> Volver al menu</a></p>
 		</fieldset>
 	</form>
-	<p><a href="menu.php"> Volver al menu</a></p>
 </body>
 
 </html>
