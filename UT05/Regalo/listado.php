@@ -16,10 +16,11 @@
             print("Código: ".$row["codigo"]."<br>");
             print("Producto: ".$row["producto"]."<br>");
             print("Detalle: ".$row["detalle"]."<br>");
-            print("Precio: ".$row["precio"]."<br>");
-            print("Descuento: ".$row["descuento"]."<br>");
-            print '<img src="images/".$row["imagen"]>'; 
+            print("Precio: ".$row["precio"]."€<br>");
+            print("Descuento: ".($row["descuento"]*100)."%<br>");
+            print "<img width='250' src=images/".$row['imagen']."><br><br>"; 
         }
     ?>
+    <p><a href="menu.php"> Volver al menu</a></p>
 </body>
 </html>
