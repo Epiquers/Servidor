@@ -7,4 +7,5 @@ mysqli_query($conn,$consulta);
 
 //redireccionamos a la web listados (este fichero lo debeis de crar vosotros)
 header ("LOCATION:listado.php");
+mysqli_close($conn);
 ?>

@@ -20,6 +20,7 @@
             print("Descuento: ".($row["descuento"]*100)."%<br>");
             print "<img width='250' src=images/".$row['imagen']."><br><br>"; 
         }
+        mysqli_close($conn);
     ?>
     <p><a href="menu.php"> Volver al menu</a></p>
 </body>
