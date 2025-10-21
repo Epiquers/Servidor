@@ -18,7 +18,7 @@
 		<td>Descuento</td> <td><input type="text" name="descuento" required /></td>
 	</tr>
 	<tr> 
-		<td> Imagen </td> <td><input type="file" name="imagen" required /></td>
+		<td> Imagen </td> <td><input type="file" name="imagen"required /></td>
 	</tr>	
 	<tr>
 		<td colspan="2"><input type="submit" name="button" value="Enviar"/></td>
