@@ -13,15 +13,15 @@
         $result=mysqli_query($conn, $consulta);
 
         while($row=mysqli_fetch_array($result)){
-            print("<strong>Código: </strong>".$row["codigo"]."<br>");
-            print("<strong>Producto: </strong>".$row["producto"]."<br>");
-            print("<strong>Detalle: </strong>".$row["detalle"]."<br>");
-            print("<strong>Precio: </strong>".$row["precio"]."€<br>");
-            print("<strong>Descuento: </strong>".($row["descuento"]*100)."%<br>");
-            $ruta=$row['imagen'];
-            print "<img width='200px' src=$ruta><br><br>";
-
+            print("Código: ".$row["codigo"]."<br>");
+            print("Producto: ".$row["producto"]."<br>");
+            print("Detalle: ".$row["detalle"]."<br>");
+            print("Precio: ".$row["precio"]."€<br>");
+            print("Descuento: ".($row["descuento"]*100)."%<br>");
+            print "<img width='250' src=images/".$row['imagen']."><br><br>"; 
         }
+        mysqli_close($conn);
     ?>
+    <p><a href="menu.php"> Volver al menu</a></p>
 </body>
 </html>
