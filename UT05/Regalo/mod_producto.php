@@ -19,6 +19,7 @@
     $detalle = $row['detalle'];
     $precio = $row['precio'];
     $descuento = $row['descuento'];
+    $imagen = $row['imagen'];
 
     ?>
     <form action="modificaciones.php" method="post" enctype="multipart/form-data">
@@ -28,19 +29,22 @@
             </tr>
             <tr>
                 <td>Codigo</td>
-                <td><input type="text" name="codigo" value="<?php echo $cod ?>" required readonly /></td>
+                <td><input type="text" name="codigo" value="<?php echo $cod; ?>" required readonly /></td>
                 <td>Producto</td>
-                <td><input type="text" name="producto" value="<?php echo $producto ?>" required /></td>
+                <td><input type="text" name="producto" value="<?php echo $producto; ?>" required /></td>
             </tr>
             <tr>
                 <td>Detalle</td>
-                <td><input type="text" name="detalle" value="<?php echo $detalle ?>" required /></td>
+                <td><input type="text" name="detalle" value="<?php echo $detalle; ?>" required /></td>
             </tr>
             <tr>
                 <td>Precio</td>
-                <td><input type="text" name="precio" value="<?php echo $precio ?>" required /></td>
+                <td><input type="text" name="precio" value="<?php echo $precio; ?>" required /></td>
                 <td>Descuento</td>
-                <td><input type="text" name="descuento" value="<?php echo $descuento ?>" required /></td>
+                <td><input type="text" name="descuento" value="<?php echo $descuento; ?>" required /></td>
+            </tr>
+            <tr>
+                <td><input type="hidden" name="imagen" value="<?php echo $imagen; ?>" required /></td>
             </tr>
             <tr>
                 <td colspan="2"><input type="submit" name="button" value="Enviar" /></td>
@@ -49,8 +53,8 @@
 
         </table>
     </form>
-    <?php 
-        mysqli_close($conn);
+    <?php
+    mysqli_close($conn);
     ?>
     <p><a href="menu.php"> Volver al menu</a></p>
 </body>
