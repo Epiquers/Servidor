@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Glosario BBDD y PHP</title>
+    <style>
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            line-height: 1.6; 
+            margin: 20px 40px;
+            background-color: #1a1a1a; /* Fondo negro */
+            color: #e0e0e0; /* Color de texto general claro */
+        }
+        h1 { 
+            border-bottom: 2px solid #00aaff; /* Borde azul brillante */
+            color: #00aaff; /* Color de título principal azul brillante */
+        }
+        h2 { 
+            border-bottom: 1px solid #555; /* Borde gris más claro */
+            padding-bottom: 5px; 
+            margin-top: 40px;
+            color: #00aaff; /* Color de subtítulos azul brillante */
+        }
+        .indice { 
+            background-color: #2a2a2a; /* Fondo gris oscuro para el índice */
+            border: 1px solid #444; /* Borde más suave */
+            padding: 10px 25px; 
+            border-radius: 8px; 
+            margin-bottom: 30px;
+        }
+        .indice ul { 
+            padding-left: 20px; 
+        }
+        .indice a {
+            color: #88ccff; /* Enlaces del índice en azul claro */
+            text-decoration: none;
+        }
+        .indice a:hover {
+            text-decoration: underline;
+        }
+        
+        .apartado {
+            background-color: #2a2a2a; /* Fondo gris oscuro para cada sección de contenido */
+            border-radius: 8px;
+            padding: 20px 30px;
+            margin-bottom: 30px; /* Espacio entre apartados */
+            border: 1px solid #3a3a3a;
+        }
+
+        /* Estilos para las nuevas listas */
+        .apartado ul {
+            list-style-type: none;
+            padding-left: 10px;
+            margin: 0;
+        }
+        .apartado li {
+            margin-top: 12px; /* Espacio entre elementos de la lista */
+        }
+        .apartado li strong {
+            font-weight: bold; 
+            color: #f0f0f0; /* Color de los términos */
+            display: block; /* Hace que el término ocupe su propia línea */
+        }
+        .apartado li div {
+            margin-left: 20px; /* Indenta la definición */
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Glosario de Comandos y Funciones</h1>
+
+    <div class="indice">
+        <h2>Índice</h2>
+        <ul>
+            <li><a href="#sql">1. Sentencias SQL (Lenguaje de Consulta)</a></li>
+            <li><a href="#clausulas">2. Cláusulas y Operadores SQL</a></li>
+            <li><a href="#php">3. Funciones PHP (Interacción y Conexión)</a></li>
+            <li><a href="#superglobales">4. Variables Superglobales PHP</a></li>
+        </ul>
+    </div>
+
+    <div class="apartado">
+        <h2 id="sql">1. Sentencias SQL (Lenguaje de Consulta)</h2>
+        <ul>
+            <li>
+                <strong>CREATE DATABASE</strong>
+                <div>Comando para crear una nueva base de datos.</div>
+            </li>
+            <li>
+                <strong>CREATE TABLE</strong>
+                <div>Comando para crear una nueva tabla y definir sus columnas.</div>
+            </li>
+            <li>
+                <strong>INSERT INTO</strong>
+                <div>Sentencia para añadir nuevos registros (filas) a una tabla.</div>
+            </li>
+            <li>
+                <strong>SELECT</strong>
+                <div>Sentencia para consultar y recuperar datos de una tabla.</div>
+            </li>
+            <li>
+                <strong>UPDATE</strong>
+                <div>Sentencia que modifica datos de registros existentes.</div>
+            </li>
+            <li>
+                <strong>DELETE FROM</strong>
+                <div>Sentencia que elimina registros (filas) de una tabla.</div>
+            </li>
+            <li>
+                <strong>ALTER TABLE</strong>
+                <div>Comando para modificar la estructura de una tabla existente.</div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="apartado">
+        <h2 id="clausulas">2. Cláusulas y Operadores SQL</h2>
+        <ul>
+            <li>
+                <strong>VALUES</strong>
+                <div>Cláusula de `INSERT INTO` que especifica los valores a insertar.</div>
+            </li>
+            <li>
+                <strong>FROM</strong>
+                <div>Cláusula que indica la tabla de origen en `SELECT` o `DELETE`.</div>
+            </li>
+            <li>
+                <strong>WHERE</strong>
+                <div>Cláusula para filtrar registros según una condición.</div>
+            </li>
+            <li>
+                <strong>SET</strong>
+                <div>Cláusula de `UPDATE` que indica las columnas a modificar.</div>
+            </li>
+            <li>
+                <strong>BETWEEN</strong>
+                <div>Operador para seleccionar valores dentro de un rango.</div>
+            </li>
+            <li>
+                <strong>LIKE</strong>
+                <div>Operador para buscar un patrón específico en texto.</div>
+            </li>
+            <li>
+                <strong>ORDER BY</strong>
+                <div>Cláusula de `SELECT` para ordenar los resultados.</div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="apartado">
+        <h2 id="php">3. Funciones PHP (Interacción y Conexión)</h2>
+        <ul>
+            <li>
+                <strong>include("archivo.php")</strong>
+                <div>Instrucción que incluye y evalúa el contenido de otro archivo PHP.</div>
+            </li>
+            <li>
+                <strong>mysqli_connect($host, $user, $pass, $db)</strong>
+                <div>Establece una conexión con el servidor MySQL.</div>
+            </li>
+            <li>
+                <strong>mysqli_select_db($conexion, $nombre_db)</strong>
+                <div>Selecciona la base de datos por defecto para las consultas.</div>
+            </li>
+            <li>
+                <strong>mysqli_query($conexion, $sql)</strong>
+                <div>Ejecuta una consulta SQL en la base de datos.</div>
+            </li>
+            <li>
+                <strong>mysqli_fetch_array($resultado)</strong>
+                <div>Obtiene una fila de resultados de una consulta como un array.</div>
+            </li>
+            <li>
+                <strong>mysqli_error($conexion)</strong>
+                <div>Devuelve el texto del último error de MySQL.</div>
+            </li>
+            <li>
+                <strong>mysqli_close($conexion)</strong>
+                <div>Cierra una conexión abierta a la base de datos.</div>
+            </li>
+            <li>
+                <strong>copy($origen, $destino)</strong>
+                <div>Función de PHP que copia un archivo de una ubicación a otra.</div>
+            </li>
+            <li>
+                <strong>header("Location: pagina.php")</strong>
+                <div>Envía una cabecera HTTP (usada para redirigir con `LOCATION:`).</div>
+            </li>
+            <li>
+                <strong>echo "texto"</strong>
+                <div>Instrucción que muestra una o más cadenas de texto.</div>
+            </li>
+            <li>
+                <strong>print("texto")</strong>
+                <div>Función que muestra una cadena de texto.</div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="apartado">
+        <h2 id="superglobales">4. Variables Superglobales PHP</h2>
+        <ul>
+            <li>
+                <strong>$_POST</strong>
+                <div>Array con datos enviados por un formulario HTML (método POST).</div>
+            </li>
+            <li>
+                <strong>$_FILES</strong>
+                <div>Array con información de archivos subidos desde un formulario.</div>
+            </li>
+            <li>
+                <strong>$_SERVER</strong>
+                <div>Array con información del servidor y la petición (ej. `REQUEST_METHOD`).</div>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>
