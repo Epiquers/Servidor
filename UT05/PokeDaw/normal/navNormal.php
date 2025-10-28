@@ -28,7 +28,7 @@
                         <i class="bi bi-person-fill-gear"> Personal</i>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Datos</a></li>
+                        <li><a class="dropdown-item" href="datosNormal.php">Datos</a></li>
                         <li class="nav-item dropdown">
                             <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                                 Asuntos propios
@@ -163,7 +163,7 @@
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                        <i class="bi bi-person-fill"> Fernando</a></i>
+                        <i class="bi bi-person-fill"> <?php echo $_SESSION['name']; ?></a></i>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
                     </ul>

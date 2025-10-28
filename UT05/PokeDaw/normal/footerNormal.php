@@ -1,3 +1,4 @@
+<?php include("../config.php") ?>
 <footer>
 		<div class="container-fluid ">
 			<div class="row justify-content-center footer1">
@@ -18,7 +19,7 @@
 				</div>		
 				<div class="row justify-content-center align-items-center">
 					<div class="col-auto" >						
-							<img src="../img/grifo.png" style="width:80px">						
+							<img src="<?php echo BASE_URL; ?>img/grifo.png" style="width:80px">						
 					</div>
 					<div class="col-auto">						
 							<span class="ve"> V</span><span class="me">M</span>							

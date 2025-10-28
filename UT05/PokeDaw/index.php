@@ -31,7 +31,7 @@
 				// Usuario regustrado
 				$row = mysqli_fetch_assoc($result);
 				if ($row["rol"] == 0) {
-					$_SESSION['name']="nombre";
+					$_SESSION['name']=$row['nombre'];
 					header("LOCATION:normal/indexNormal.php");
 				} else if ($row['rol'] == 1) {
 					header("LOCATION:admin/indexAdmin.php");
@@ -83,7 +83,7 @@
 					<div class="row">
 						<div class="col-12 mb-1">
 							<p class="text-center cuenta">¿NECESITAS UNA CUENTA?</p>
-							<a class="btn w-100" href="registro.html" role="buttom">REGÍSTRATE</a>
+							<a class="btn w-100" href="registro.php" role="buttom">REGÍSTRATE</a>
 						</div>
 					</div>
 				</div>
